@@ -11,7 +11,10 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
-
+@font-face {
+	font-family: "Satoshi";
+	src: URL("/lib/Satoshi-Variable.ttf") format("truetype");
+}
 /*--------------------------------------------------------------
 # Colors
 --------------------------------------------------------------*/
@@ -28,7 +31,7 @@
 body {
 	background: #fff;
 	color: #2f3138;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	overflow-x: hidden;
 }
 
@@ -56,7 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Raleway", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	font-weight: 400;
 	margin: 0 0 20px 0;
 	padding: 0;
@@ -191,7 +194,7 @@ h6 {
 	margin: 0;
 	padding: 6px 0;
 	line-height: 1;
-	font-family: "Raleway", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	font-weight: 700;
 	letter-spacing: 3px;
 	text-transform: uppercase;
@@ -289,7 +292,7 @@ h6 {
 	text-decoration: none;
 	display: inline-block;
 	color: rgba(202, 206, 221, 0.8);
-	font-family: "Raleway", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	font-weight: 600;
 	font-size: 14px;
 	outline: none;
@@ -538,7 +541,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro h1 {
 	color: #fff;
-	font-family: "Raleway", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	font-size: 56px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -555,7 +558,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .about-btn {
-	font-family: "Raleway", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	font-weight: 500;
 	font-size: 14px;
 	letter-spacing: 1px;
@@ -1360,7 +1363,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	margin: 0 0 20px 0;
 	padding: 2px 0 2px 0;
 	line-height: 1;
-	font-family: "Raleway", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	font-weight: 700;
 	color: #fff;
 }
@@ -1374,7 +1377,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	font-size: 14px;
 	line-height: 24px;
 	margin-bottom: 0;
-	font-family: "Raleway", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	color: #fff;
 }
 
