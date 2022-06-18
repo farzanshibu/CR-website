@@ -1226,7 +1226,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 300px;
+	width: 500px;
 }
 .card .right .productInfo {
 	width: 300px;
