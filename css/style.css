@@ -29,7 +29,7 @@ body {
 	background: #fff;
 	color: #2f3138;
 	font-family: "Open Sans", sans-serif;
-	/* overflow-x: hidden; */
+	overflow-x: hidden;
 }
 
 a {
@@ -574,6 +574,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro .about-btn:hover {
 	background: var(--color-secondary);
 	color: #000;
+}
+.parent {
+	z-index: 10;
 }
 .mouse_scroll {
 	display: block;
@@ -1186,6 +1189,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .product {
 	height: 600px;
+	overflow: hidden;
 }
 .card {
 	position: relative;
@@ -1300,15 +1304,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media screen and (max-width: 576px) {
+	.card {
+		width: 974px;
+		position: relative;
+	}
 	.card .right {
+		left: 0%;
+		height: 644px;
 		transform: scale(0.7) translate(400px, 10px);
 	}
 	.card .left {
-		transform: translate(250px, 10px);
+		transform: translate(314px, 10px);
 	}
-	.product {
-		height: 600px;
-		width: 300px;
+	.card .right .helmet {
+		width: 509px;
+		transform: translate(-18%, 0%);
+	}
+	.card .right .productInfo {
+		margin: 50px 0 0 50px;
 	}
 }
 @-webkit-keyframes clickMe {
