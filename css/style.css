@@ -575,7 +575,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 	background: var(--color-secondary);
 	color: #000;
 }
-
 .mouse_scroll {
 	display: block;
 	margin: 0 auto;
