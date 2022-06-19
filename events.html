@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Events | CrossRoads</title>
+		<link rel="stylesheet" href="./css/event.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;900&family=Outfit:wght@900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&family=Roboto:ital,wght@1,100&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+
+	<body>
+		<div class="main w-full relative flex justify-center">
+			<div class="main-inner absolute pt-56">
+				<!-- <h1
+					class="heading text-4xl md:text-9xl tracking-wider font-outfit font-bold"
+				>
+					Crossroads
+				</h1> -->
+				<img src="./img/logo.png" alt="" />
+			</div>
+			<div class="main-inner absolute p-[36rem]">
+				<div class="flex gap-5">
+					<a
+						href="#event"
+						class="rounded-full text-white bg-[#00daff] border-solid border-2 border-[#00daff] p-3 pt-3 pb-3 px-10 hover:bg-white hover:text-[#00daff]"
+						>Events</a
+					>
+					<a
+						href="./index.html"
+						class="rounded-full text-white bg-[#00daff] border-solid border-2 border-[#00daff] p-3 pt-3 pb-3 px-10 hover:bg-white hover:text-[#00daff]"
+						>Home</a
+					>
+				</div>
+			</div>
+			<img
+				class="main-img w-full h-full object-cover"
+				src="./img/events/hero2.jpg"
+				alt="Crossroads"
+			/>
+		</div>
+
+		<div class="events"></div>
+
+		<template id="event-template">
+			<div
+				id="event"
+				class="flex gap-20 items-center p-10 flex-col md:flex-row"
+			>
+				<div class="w-1/2">
+					<div class="lg:pl-8 flex justify-center">
+						<img src="./images/1.jpeg" class="rounded-3xl" alt="1" data-image />
+					</div>
+				</div>
+				<div class="w-1/3">
+					<p class="text-5xl font-bold text-center" data-title>.....</p>
+					<h3 class="pt-10">
+						Date:
+						<p class="font-bold" data-eventdatetime></p>
+					</h3>
+					<h3 class="pt-3">
+						Venue:
+						<p class="font-bold" data-venue></p>
+					</h3>
+					<h3 class="pt-3">
+						Description:
+						<div class="pt-3 font-bold" data-description></div>
+					</h3>
+					<h3 class="pt-3">
+						Register Fee: ₹
+						<p class="font-bold" data-fee></p>
+					</h3>
+					<br />
+					<div class="p-4 flex justify-center items-center">
+						<a
+							href="#"
+							data-reglink
+							class="rounded-full text-white bg-[#00daff] border-solid border-2 border-[#00daff] p-3 pt-3 pb-3 px-10 hover:bg-white hover:text-[#00daff] absolute"
+							>Register Now</a
+						>
+					</div>
+				</div>
+			</div>
+		</template>
+	</body>
+	<script>
+		const grid = document.querySelector(".events");
+		const cardTemplate = document.getElementById("event-template");
+		const query = `
+		query MyQuery {
+				eventsCr {
+					id
+					venue
+					registerLink
+					registerFee
+					eventName
+					eventDescriptions {
+						html
+					}
+					dateTimeEvent
+					image {
+						url
+					}
+				}
+			}`;
+		fetch(
+			"https://api-ap-south-1.graphcms.com/v2/cl4ivz33z4hql01z6ew8092vt/master",
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify({
+					query,
+				}),
+			},
+		)
+			.then((res) => res.json())
+			.then((posts) => {
+				grid.innerHTML = "";
+				posts.data.eventsCr.forEach((post, index) => {
+					const div = cardTemplate.content.cloneNode(true);
+					div.querySelector("[data-title]").textContent = post.eventName;
+					div.querySelector("[data-venue]").textContent = post.venue;
+					div.querySelector("[data-fee]").textContent = post.registerFee;
+					div.querySelector("[data-reglink]").href = post.registerLink;
+					div.querySelector("[data-eventdatetime]").textContent = new Date(
+						post.dateTimeEvent,
+					).toLocaleDateString("en-US", {
+						year: "numeric",
+						month: "2-digit",
+						day: "2-digit",
+						weekday: "short",
+					});
+					div.querySelector("[data-image]").src = post.image.url;
+					div.querySelector("[data-description]").innerHTML =
+						post.eventDescriptions.html;
+					grid.append(div);
+				});
+			});
+	</script>
+</html>
