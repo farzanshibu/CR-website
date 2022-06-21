@@ -1,59 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
-</head>
-<!-- <style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!-- <style>
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
     * {
         font-family: 'Oswald', sans-serif;
     }
 </style> -->
 
-<body>
-
+  <body>
     <!-- <div id="demo" style="font-size: x-large;"></div> -->
-    <div id="countdown " class="flex flex-col w-full bg-red">
-        <div class="heading">CROSS ROADS</div>
-        <div class="container flex-row">
-            <div class="days flex-col">
-                <h2>50</h2>
-                <h3>days</h3>
-            </div>
-            <div class="squarebox"></div>
-            <div class="hour flex-col">
-                <h2>11</h2>
-                <h3>hours</h3>
-            </div>
-            <div class="squarebox"></div>
-            <div class="minute flex-col">
-                <h2>33</h2>
-                <h3>minutes</h3>
-            </div>
-            <div class="squarebox"></div>
-            <div class="seconds">
-                <h2>40</h2>
-                <h3>seconds</h3>
-            </div>
-            <div class="dates">
-                <h4></h4>
-            </div>
+    <div id="countdown" class="flex w-full flex-col">
+      <div class="heading">CROSS ROADS</div>
+      <div class="container flex">
+        <div class="days">
+          <h2>50</h2>
+          <h3>days</h3>
         </div>
+        <div class="squarebox"></div>
+        <div class="hour">
+          <h2>11</h2>
+          <h3>hours</h3>
+        </div>
+        <div class="squarebox"></div>
+        <div class="minute">
+          <h2>33</h2>
+          <h3>minutes</h3>
+        </div>
+        <div class="squarebox"></div>
+        <div class="seconds">
+          <h2>40</h2>
+          <h3>seconds</h3>
+        </div>
+      </div>
+      <div class="dates">
+        <h4>June</h4>
+      </div>
     </div>
-
-    <div class="text-red">Hello</div>
-
-
-
-</body>
-<!-- <script>
+  </body>
+  <!-- <script>
     var countDownDate = new Date("June 26, 2022 00:00:00").getTime();
     var x = setInterval(function() {
         var now = new Date().getTime();
@@ -69,5 +66,4 @@
         }
     }, 1000);
 </script> -->
-
 </html>
