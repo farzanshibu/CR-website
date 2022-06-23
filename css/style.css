@@ -13,15 +13,16 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
 @font-face {
 	font-family: "Satoshi";
-	src: URL("/lib/Satoshi-Variable.ttf") format("truetype");
+	src: URL("../assets/coolvetica\ rg.otf") format("opentype");
 }
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
 /*--------------------------------------------------------------
 # Colors
 --------------------------------------------------------------*/
 
 :root {
-	--color-primary: #ffe500;
-	--color-secondary: #00daff;
+	--color-primary: #c186e5;
+	--color-secondary: #8f00ff;
 }
 
 /*--------------------------------------------------------------
@@ -31,7 +32,8 @@
 body {
 	background: #fff;
 	color: #2f3138;
-	font-family: "Satoshi", sans-serif;
+	font-family: "Dongle", sans-serif;
+	font-weight: 400;
 	overflow-x: hidden;
 }
 
@@ -60,7 +62,7 @@ h4,
 h5,
 h6 {
 	font-family: "Satoshi", sans-serif;
-	font-weight: 400;
+	font-weight: 400 !important;
 	margin: 0 0 20px 0;
 	padding: 0;
 	color: #0e1b4d;
@@ -160,7 +162,6 @@ h6 {
 	background-color: #f6f7fd;
 }
 
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -208,6 +209,7 @@ h6 {
 #header #logo h1 a,
 #header #logo h1 a:hover {
 	color: #fff;
+	font-weight: 200 !important;
 }
 
 #header #logo img {
@@ -328,7 +330,7 @@ h6 {
 }
 
 .nav-menu li.buy-tickets a {
-	color: #000;
+	color: #fff;
 	background: var(--color-secondary);
 	padding: 7px 22px;
 	border-radius: 50px;
@@ -491,6 +493,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
+# Countdown Section
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@font-face {
+	font-family: leaguegothic;
+	src: url("../assets/leaguegothic-condensed-regular-webfont.ttf");
+}
+.count {
+	font-family: "Oswald", sans-serif;
+	color: white;
+	height: 20px;
+}
+#days,
+#hours,
+#minutes,
+#seconds {
+	font-family: leaguegothic;
+}
+
+/*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
 #myVideo {
@@ -498,6 +520,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	bottom: 0;
 	min-width: 100%;
 	min-height: 100%;
+	object-fit: cover;
 }
 
 #intro {
@@ -598,8 +621,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 	-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
 	transform: rotate(45deg);
 
-	border-right: 2px solid #daff00;
-	border-bottom: 2px solid #daff00;
+	border-right: 2px solid #c186e5;
+	border-bottom: 2px solid #c186e5;
 	margin: 0 0 3px 4px;
 
 	width: 16px;
@@ -1210,7 +1233,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .card .left {
 	width: 480px;
 	height: 553px;
-	background: #daff00;
+	background: #c186e5;
 	border-radius: 23px;
 	display: flex;
 	align-items: center;
@@ -1247,11 +1270,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 	font-weight: 600;
 	line-height: 46px;
 	font-size: 40px;
+	color: #fff;
 	margin-bottom: 15px;
 }
 .card .right .productInfo h2 {
 	font-weight: 300;
 	font-size: 32px;
+	color: #fff;
 	letter-spacing: 1.6px;
 	margin-bottom: 30px;
 }
@@ -1262,20 +1287,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .card .right .productInfo a {
 	height: 48px;
-	background: #daff00;
+	background: #c186e5;
 	border-radius: 90px;
 	margin: 0 70px;
 	font-weight: 300;
 	line-height: 35px;
 	font-size: 14px;
 	padding: 12px 24px;
-	color: #000;
+	color: #fff;
 	font-weight: 600;
 }
 .card .right .productInfo h3 {
 	width: 80px;
 	height: 80px;
 	font-weight: 300;
+	color: #fff;
 	line-height: 80px;
 	font-size: 16px;
 	margin-left: 30px;
@@ -1286,6 +1312,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	line-height: normal;
 	font-size: 12px;
 	letter-spacing: 3px;
+	color: #fff;
 	margin-bottom: 15px;
 }
 .card .right .productInfo p {
@@ -1303,7 +1330,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	cursor: pointer;
 }
 .card .right .productInfo p:hover {
-	background-color: #daff00;
+	background-color: #c186e5;
 	color: #000;
 }
 
